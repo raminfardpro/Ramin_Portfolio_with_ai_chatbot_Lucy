@@ -45,4 +45,4 @@ Update the following files with your personal information:
 ## Detailed Explanation
 
 For a comprehensive tutorial and detailed explanation, visit the blog post:  
-[AI-Powered Portfolio: Lucy - A New Era in Personal Portfolios](https://rishirajsharma-portfolio.streamlit.app/)
+[AI-Powered Portfolio: Lucy - A New Era in Personal Portfolios](https://medium.com/@rislash/ai-powered-portfolio-lucy-a-new-era-in-personal-portfolios-416edfe4c223)
