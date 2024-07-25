@@ -14,7 +14,7 @@ Welcome to the AI-powered portfolio project! This repository contains the code f
 1. **Clone the Repository:**
    ```sh
    git clone https://github.com/vicky-playground/portfolio-template/
-   cd portfolio-template
+   cd Rishi_Portfolio_with_ai_chatbot_Lucy
    
 2. **Install Dependencies:**
    ```sh
