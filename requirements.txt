@@ -2,4 +2,3 @@ streamlit==1.34.0
 google-generativeai==0.7.2
 streamlit-option-menu==0.3.6
 streamlit-pills==0.2.0
-pandas==2.2.2
