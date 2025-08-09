@@ -2,6 +2,26 @@ import streamlit as st
 import google.generativeai as genai
 from datetime import datetime
 from streamlit_pills import pills
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# ---- ADD CUSTOM CSS HERE ----
+st.markdown("""
+    <style>
+    /* Target the Streamlit text input box */
+    div.stTextInput > div > input {
+        border: 2px solid #f39c12; /* Orange border */
+        border-radius: 8px;        /* Rounded corners */
+        padding: 8px;
+    }
+    div.stTextInput > div > input:focus {
+        border: 2px solid #e67e22; /* Darker orange when active */
+        outline: none;
+    }
+    </style>
+""", unsafe_allow_html=True)
+# ---- END CUSTOM CSS ----
 
 # Configuration and initialization
 LOG_DIR = "log"
