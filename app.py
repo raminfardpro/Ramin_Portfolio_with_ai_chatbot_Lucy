@@ -73,8 +73,11 @@ general_prompt = ["Who is Ramin?", "What are Ramin’s top UX skills?", "Tell me
 
 def configure_genai():
     genai.configure(api_key=st.secrets["gemini_key"])
-    model = genai.GenerativeModel(MODEL_NAME)
-    return model.start_chat(history=[], system_instruction=SYSTEM_INSTRUCTION)
+    model = genai.GenerativeModel(
+        model_name=MODEL_NAME,                 # or "gemini-1.5-flash"
+        system_instruction=SYSTEM_INSTRUCTION  # <-- move it here
+    )
+    return model.start_chat(history=[])
 
 
 def log_conversation(role, content):
