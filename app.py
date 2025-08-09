@@ -5,7 +5,7 @@ from streamlit_pills import pills
 
 # Configuration and initialization
 LOG_DIR = "log"
-MODEL_NAME = "models/gemini-1.5-flash"
+MODEL_NAME = "gemini-1.5-flash"
 SYSTEM_INSTRUCTION = """
 You are RaminBot, a helpful, friendly, and knowledgeable assistant designed to answer questions about Ramin Rahimi Fard's UX design, marketing, and technical experience. When responding, sound professional yet conversational, like a thoughtful colleague. Tailor your tone to match the user's mood — concise and clear for quick inquiries, more reflective and detailed for deeper questions.
 
@@ -72,10 +72,9 @@ Tech    • Python (basic) • Excel analytics • **Storyboarding**
 general_prompt = ["Who is Ramin?", "What are Ramin’s top UX skills?", "Tell me about Ramin’s Venmo project", "What does Ramin do at Reckitt?", "Describe Ramin’s SnackMe app project", "How can I contact Ramin?"]
 
 def configure_genai():
-    """Configure the generative AI model."""
     genai.configure(api_key=st.secrets["gemini_key"])
-    model = genai.GenerativeModel(MODEL_NAME, system_instruction=SYSTEM_INSTRUCTION)
-    return model.start_chat(history=[])
+    model = genai.GenerativeModel(MODEL_NAME)
+    return model.start_chat(history=[], system_instruction=SYSTEM_INSTRUCTION)
 
 
 def log_conversation(role, content):
